@@ -1,8 +1,8 @@
 {
     "name": "okconnect",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A JavaScript Library for Basic Http/WebSocket Operation.",
-    "main": "index.js",
+    "main": "./app/src/main/js/okConnect.js",
     "repository": "https://github.com/shaching/okConnect",
     "author": "Johnny Chu <chuhsun@gmail.com>",
     "license": "Apache 2.0",
