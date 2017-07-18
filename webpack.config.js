@@ -1,15 +1,15 @@
 const path = require('path');
 
 module.exports = {
-    context: path.resolve('app'),
+    context: path.resolve('src'),
 
     entry: [
         'babel-polyfill', 'whatwg-fetch'
     ],
 
     output: {
-        path: path.resolve('build'),
-        filename: 'okConnect.min.js'
+        path: path.resolve('lib'),
+        filename: 'okConnect.js'
     },
 
     module: {

@@ -1,14 +1,14 @@
 {
     "name": "okconnect",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A JavaScript Library for Basic Http/WebSocket Operation.",
-    "main": "./app/src/main/js/okConnect.js",
+    "main": "okConnect.js",
     "repository": "https://github.com/shaching/okConnect",
     "author": "Johnny Chu <chuhsun@gmail.com>",
     "license": "Apache 2.0",
     "scripts": {
         "build": "webpack --progress --colors --config webpack.config.js",
-        "lint": "eslint ./app/src/main/js"
+        "lint": "eslint ./src"
     },
     "dependencies": {
         "eslint": "^4.2.0",

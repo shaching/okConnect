@@ -512,4 +512,5 @@ __pycache__/
 # webpack output folder
 build/
 dist/
+lib/
 yarn.lock
