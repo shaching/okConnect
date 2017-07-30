@@ -1,6 +1,6 @@
 {
     "name": "okconnect",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "A JavaScript Library for Basic Http/WebSocket Operation.",
     "main": "./lib/okConnect.js",
     "repository": "https://github.com/shaching/okConnect",

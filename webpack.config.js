@@ -4,10 +4,7 @@ const path = require('path');
 module.exports = {
     entry: [
         'whatwg-fetch',
-        './src/main/js/HttpConnect.js',
-        './src/main/js/HttpHeaders.js',
-        './src/main/js/HttpStatus.js',
-        './src/main/js/WebSocketConnect.js',
+        './src/main/js/index.js',
     ],
 
     output: {
@@ -34,10 +31,6 @@ module.exports = {
         ]
     },
 
-    externals: {
-        is_js: 'is',
-    },
-
     resolve: {
         extensions: ['.js']
     },
@@ -49,5 +42,6 @@ module.exports = {
                 drop_console: false,
             }
         }),
+        new webpack.optimize.OccurrenceOrderPlugin(),
     ],
 };

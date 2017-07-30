@@ -8,7 +8,9 @@ yarn add okconnect
 
 # Use with ES6
 ```
-Coming Soon.
+import {HttpConnect, HttpHeaders, HttpStatus, WebSocketConnect} from 'okconnect';
+
+Coming Soon...
 ```
 
 ### License
