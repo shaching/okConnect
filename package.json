@@ -1,6 +1,6 @@
 {
     "name": "okconnect",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "A JavaScript Library for Basic Http/WebSocket Operation.",
     "main": "./lib/okConnect.js",
     "repository": "https://github.com/shaching/okConnect",
@@ -11,10 +11,7 @@
         "lint": "eslint ./src"
     },
     "dependencies": {
-        "eslint": "^4.3.0",
-        "eslint-plugin-import": "^2.7.0",
         "is_js": "^0.9.0",
-        "webpack": "^3.4.1",
         "whatwg-fetch": "^2.0.3"
     },
     "devDependencies": {
@@ -23,6 +20,9 @@
         "babel-loader": "^7.1.1",
         "babel-polyfill": "^6.23.0",
         "babel-preset-env": "^1.6.0",
-        "eslint-loader": "^1.9.0"
+        "eslint": "^4.3.0",
+        "eslint-loader": "^1.9.0",
+        "eslint-plugin-import": "^2.7.0",
+        "webpack": "^3.4.1"
     }
 }

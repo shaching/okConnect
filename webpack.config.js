@@ -3,9 +3,11 @@ const path = require('path');
 
 module.exports = {
     entry: [
-        'babel-polyfill',
         'whatwg-fetch',
-        './src/main/js/index.js'
+        './src/main/js/HttpConnect.js',
+        './src/main/js/HttpHeaders.js',
+        './src/main/js/HttpStatus.js',
+        './src/main/js/WebSocketConnect.js',
     ],
 
     output: {
@@ -22,19 +24,18 @@ module.exports = {
                 test: /\.js$/,
                 include: [path.resolve('src')],
                 exclude: [path.resolve('node_modules')],
-                loader: 'eslint-loader'
+                use: 'eslint-loader'
             }, {
                 test: /\.js$/,
                 include: [path.resolve('src')],
                 exclude: [path.resolve('node_modules')],
-                loader: 'babel-loader'
+                use: 'babel-loader'
             }
         ]
     },
 
     externals: {
-        'is_js': 'is',
-        'HttpStatus': 'HttpStatus',
+        is_js: 'is',
     },
 
     resolve: {

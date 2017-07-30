@@ -1,6 +1,16 @@
 # okConnect
 A JavaScript Library for Basic Http/WebSocket Operation.
 
+# Install
+```
+yarn add okconnect
+```
+
+# Use with ES6
+```
+Coming Soon.
+```
+
 ### License
 
 okConnect is released under the [Apache 2.0 license](LICENSE).
