@@ -1,8 +1,6 @@
-import is from 'is_js';
 import HttpStatus from './HttpStatus';
 
 export default class HttpConnect {
-
     constructor(headers, baseUrl) {
         if (this.constructor === HttpConnect) {
             throw new TypeError('Can not new abstract class.');
@@ -12,15 +10,6 @@ export default class HttpConnect {
     }
 
     post(apiName, bodyData) {
-        if (is.json(bodyData)) {
-            const request = {
-                method: 'POST',
-                headers: this.headers,
-                body: JSON.stringify(bodyData)
-            };
-            return this.call(`${this.baseUrl}${apiName}`, request);
-        }
-
         const request = {
             method: 'POST',
             headers: this.headers,
@@ -49,7 +38,7 @@ export default class HttpConnect {
         const request = {
             method: 'PUT',
             headers: this.headers,
-            body: JSON.stringify(bodyData)
+            body: bodyData
         };
         return this.call(`${this.baseUrl}${apiName}`, request);
     }
@@ -58,13 +47,8 @@ export default class HttpConnect {
         HttpStatus.statusCode = '';
         const response = await fetch(apiUrl, request);
 
-        /**
-         * https://stackoverflow.com/questions/37280029
-         */
         if (response.ok) {
-            return response.json().catch((error) => {
-                return {};
-            });
+            return response;
         }
 
         HttpStatus.statusCode = response.status;
