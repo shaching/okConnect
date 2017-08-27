@@ -43,6 +43,15 @@ export default class HttpConnect {
         return this.call(`${this.baseUrl}${apiName}`, request);
     }
 
+    patch(apiName, bodyData) {
+        const request = {
+            method: 'PATCH',
+            headers: this.headers,
+            body: bodyData
+        };
+        return this.call(`${this.baseUrl}${apiName}`, request);
+    }
+
     async call(apiUrl, request) {
         HttpStatus.statusCode = '';
         const response = await fetch(apiUrl, request);
@@ -51,7 +60,6 @@ export default class HttpConnect {
             return response;
         }
 
-        HttpStatus.statusCode = response.status;
-        throw Error(response.statusText);
+        return response;
     }
 }
