@@ -1,5 +1,5 @@
 # okConnect
-A JavaScript Library for Basic Http/WebSocket Operation.
+Http CRUD ( GET, POST, PUT, DELETE, PATCH ) Operation in ES6.
 
 # Install
 ```
