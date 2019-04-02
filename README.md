@@ -1,16 +1,60 @@
 # okConnect
-Http CRUD ( GET, POST, PUT, DELETE, PATCH ) Operation in ES6.
+A lightweight Http CRUD (GET, POST, PUT, DELETE, PATCH) Operation in ES6.
 
-# Install
+## Install
 ```
 yarn add okconnect
 ```
 
-# Use with ES6
-```
-import {HttpConnect, HttpHeaders, HttpStatus, WebSocketConnect} from 'okconnect';
+## Used with ES6 example.
+```javascript
+import { HttpConnect, HttpHeader } from 'okconnect';
 
-Coming Soon...
+export default class Foo extends HttpConnect {
+  constructor() {
+    const httpHeader = new HttpHeader.Builder()
+      .setNoCacheControl()
+      .setJsonContentType()
+      .setXWwwFormUrlencodedContentType()
+      .setJwtAuthorization(jwt)
+      .build();
+
+    super(httpHeader.getHeader(), 'http://192.168.1.1/api/v1/');
+  }
+
+  booPost(jsonBody) {
+    return super.post('user/login', jsonBody);
+  }
+  
+  booGet(uid) {
+    return super.get(`user/${uid}`);
+  }
+  
+  booPut(jsonBody) {
+    return super.put('user/status', jsonBody);
+  }
+
+  booDelete(uid) {
+    return super.delete(`user/${uid}`);
+  }
+  
+  booPatch(jsonBody) {
+    return super.get('user/profile', jsonBody);
+  }
+}
+```
+
+## HttpHeader supported 4 usually cases. Moreover, you can inherit and expand features.
+```javascript
+
+setNoCacheControl()
+
+setJsonContentType()
+
+setXWwwFormUrlencodedContentType()
+
+setJwtAuthorization(jwt)
+
 ```
 
 ### License

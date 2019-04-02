@@ -1,8 +1,11 @@
 node_modules/
 .idea/
 src/
-.babelrc
-.eslintrc
+.eslintrc.json
 .gitignore
+.prettierrc.json
+babel.config.js
 webpack.config.js
 yarn.lock
+*.log
+package-lock.json
