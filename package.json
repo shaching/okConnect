@@ -11,25 +11,24 @@
     "lint": "eslint ./src && prettier --check src/**/*.js"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.0",
+    "@babel/polyfill": "^7.12.1",
     "is_js": "^0.9.0",
-    "whatwg-fetch": "^3.0.0"
+    "whatwg-fetch": "^3.6.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.0",
-    "@babel/preset-env": "^7.4.2",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.5",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-loader": "^2.1.2",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "filemanager-webpack-plugin": "^2.0.5",
-    "prettier": "^1.16.4",
-    "uglifyjs-webpack-plugin": "^2.1.2",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0"
+    "@babel/core": "^7.13.1",
+    "@babel/preset-env": "^7.13.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-webpack-plugin": "^2.5.2",
+    "filemanager-webpack-plugin": "^3.1.0",
+    "prettier": "^2.2.1",
+    "webpack": "^5.24.0",
+    "webpack-cli": "^4.5.0"
   }
 }

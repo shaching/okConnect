@@ -1,6 +1,6 @@
 const path = require('path');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -16,13 +16,6 @@ module.exports = {
   module: {
     rules: [
       {
-        enforce: 'pre',
-        test: /\.js$/,
-        include: [path.resolve('src')],
-        exclude: [path.resolve('node_modules')],
-        use: 'eslint-loader',
-      },
-      {
         test: /\.js$/,
         include: [path.resolve('src')],
         exclude: [path.resolve('node_modules')],
@@ -31,19 +24,16 @@ module.exports = {
     ],
   },
   optimization: {
-    minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: false,
-      }),
-    ],
+    minimize: true,
   },
   plugins: [
     new FileManagerPlugin({
-      onStart: {
-        delete: ['./dist/'],
+      events: {
+        onStart: {
+          delete: ['./dist/'],
+        },
       },
     }),
+    new ESLintPlugin(),
   ],
 };
